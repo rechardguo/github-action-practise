@@ -18,7 +18,11 @@ jobs:
            ref: main
            token: ${{ secrets.USERPASS }}
       - run: |
-          git checkout -B dev refs/remotes/origin/dev
-          git pull origin dev 
+          git remote -v
+          git branch -l
+          git branch -vv
+          git checkout -b dev --track origin/dev
+          git branch 
+          git pull
           git merge main 
           git push origin dev
