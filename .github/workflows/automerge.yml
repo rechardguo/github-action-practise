@@ -18,6 +18,8 @@ jobs:
            ref: main
            token: ${{ secrets.USERPASS }}
       - run: |
+          git config --global user.email "sdragonguo@163.com"
+          git config --global user.name "rechard.guo"
           git remote -v
           git branch -a
           git branch -vv
