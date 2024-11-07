@@ -19,7 +19,7 @@ jobs:
            token: ${{ secrets.USERPASS }}
       - name: Run merge task
         run: |
-          git checkout dev           
+          git checkout -b dev           
           git branch --set-upstream-to=origin/dev
           git pull origin dev 
           git merge main 
