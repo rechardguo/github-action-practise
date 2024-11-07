@@ -19,7 +19,7 @@ jobs:
            token: ${{ secrets.USERPASS }}
       - name: Run merge task
         run: |
-          git checkout -b dev
-          git pull
+          git checkout -b dev || echo "Branch already exists, continuing..."
+          git pull origin dev --rebase 
           git merge main
           git push origin dev
