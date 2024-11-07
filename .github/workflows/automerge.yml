@@ -20,6 +20,6 @@ jobs:
       - name: Run merge task
         run: |
           git checkout -b dev || echo "Branch already exists, continuing..."
-          git pull origin dev --rebase 
+          git pull origin dev 
           git merge main
           git push origin dev
