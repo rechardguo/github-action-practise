@@ -22,5 +22,5 @@ jobs:
           git checkout -b dev || echo "Branch already exists, continuing..."
           git config pull.rebase false
           git pull origin dev 
-          git merge main
+          git merge main --allow-unrelated-histories
           git push origin dev
