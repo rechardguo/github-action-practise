@@ -17,8 +17,7 @@ jobs:
         with:
            ref: main
            token: ${{ secrets.USERPASS }}
-      - name: Run merge task
-        run: |
+      - run: |
           git checkout -B dev refs/remotes/origin/dev
           git pull origin dev 
           git merge main 
