@@ -19,8 +19,9 @@ jobs:
            token: ${{ secrets.USERPASS }}
       - run: |
           git remote -v
-          git branch -l
+          git branch -a
           git branch -vv
+          git fetch
           git checkout -b dev --track origin/dev
           git branch 
           git pull
