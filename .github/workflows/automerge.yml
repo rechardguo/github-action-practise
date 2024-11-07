@@ -20,5 +20,6 @@ jobs:
       - name: Run merge task
         run: |
           git checkout -b dev
+          git pull
           git merge main
           git push origin dev
