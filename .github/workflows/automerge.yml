@@ -25,5 +25,5 @@ jobs:
           git checkout -b dev --track origin/dev
           git branch 
           git pull
-          git merge main 
+          git merge main --allow-unrelated-histories
           git push origin dev
