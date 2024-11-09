@@ -33,4 +33,6 @@ jobs:
           cd github-action-practise
           git checkout main
           git merge dev
+          git config --global user.email "sdragonguo@163.com"
+          git config --global user.name "rechard.guo" 
           git push
