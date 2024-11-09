@@ -36,5 +36,5 @@ jobs:
 
           git checkout main
           git merge dev
-         
+          git commit -m "github actionflow auto-merge"
           git push
