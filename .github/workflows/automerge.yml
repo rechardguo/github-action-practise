@@ -2,7 +2,7 @@ name: auto-merge
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,17 +15,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4 
         with:
-           ref: main
+           ref: dev
            token: ${{ secrets.USERPASS }}
       - run: |
           git config --global user.email "sdragonguo@163.com"
-          git config --global user.name "rechard.guo"
-          git remote -v
-          git branch -a
-          git branch -vv
+          git config --global user.name "rechard.guo"        
           git fetch
-          git checkout -b dev --track origin/dev
-          git branch 
+          git checkout -b main --track origin/main        
           git pull
-          git merge main --allow-unrelated-histories
-          git push origin dev
+          git merge dev --allow-unrelated-histories
+          git push origin main
