@@ -23,5 +23,5 @@ jobs:
           git fetch
           git checkout -b main --track origin/main        
           git pull
-          git merge dev --allow-unrelated-histories
+          git merge dev --no-ff --allow-unrelated-histories
           git push origin main
