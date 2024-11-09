@@ -27,8 +27,8 @@ jobs:
       #     git push origin main
       - name: auto merge       
         run: |
-          mkdir /code
-          cd /code
+          mkdir code
+          cd code
           git clone https://${{ secrets.USERPASS }}@github.com/${{ github.repository }}.git
           cd github-action-practise
           git checkout main
