@@ -27,12 +27,14 @@ jobs:
       #     git push origin main
       - name: auto merge       
         run: |
+          git config --global user.email "sdragonguo@163.com"
+          git config --global user.name "rechard.guo" 
           mkdir code
           cd code
           git clone https://${{ secrets.USERPASS }}@github.com/${{ github.repository }}.git
           cd github-action-practise
+
           git checkout main
           git merge dev
-          git config --global user.email "sdragonguo@163.com"
-          git config --global user.name "rechard.guo" 
+         
           git push
