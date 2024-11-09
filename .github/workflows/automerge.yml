@@ -13,15 +13,28 @@ jobs:
  
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4 
-        with:
-           ref: dev
-           token: ${{ secrets.USERPASS }}
-      - run: |
+      # - uses: actions/checkout@v4 
+      #   with:
+      #      ref: dev
+      #      token: ${{ secrets.USERPASS }}
+      # - run: |
+      #     git config --global user.email "sdragonguo@163.com"
+      #     git config --global user.name "rechard.guo"        
+      #     git fetch
+      #     git checkout -b main --track origin/main        
+      #     git pull
+      #     git merge dev
+      #     git push origin main
+      - name: auto merge       
+        run: |
           git config --global user.email "sdragonguo@163.com"
-          git config --global user.name "rechard.guo"        
-          git fetch
-          git checkout -b main --track origin/main        
-          git pull
-          git merge dev --allow-unrelated-histories
-          git push origin main
+          git config --global user.name "rechard.guo" 
+          mkdir code
+          cd code
+          git clone https://${{ secrets.USERPASS }}@github.com/${{ github.repository }}.git
+          cd github-action-practise
+
+          git checkout main
+          git merge dev
+         
+          git push
