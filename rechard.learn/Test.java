@@ -1,8 +1,7 @@
 package rechard.learn;
 
-class Test{
-    public static void main(String[] args) {
-        System.out.println("hello");
-    
-    }
+import javax.servlet.request;
+
+class TestController{
+   
 }
