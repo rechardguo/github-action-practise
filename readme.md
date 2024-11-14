@@ -74,6 +74,14 @@ https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/m
 为你的 token 创建一个新的 secret，例如命名为 PERSONAL_ACCESS_TOKEN，然后粘贴之前复制的 token 作为它的值。
 
 
+# How to publish docker image to docker container-registry
+
+- docker.hub : docker.io
+- github package : ghcr.io
+[参考 网上 GitHub-container-registry](https://www.chenshaowen.com/blog/github-container-registry.html)
+
+
 
 # reference
 [spring action](https://docs.github.com/zh/actions)
+[github package](https://docs.github.com/zh/actions/use-cases-and-examples/publishing-packages/publishing-docker-images#%E5%8F%91%E5%B8%83%E6%98%A0%E5%83%8F%E5%88%B0-github-packages)
