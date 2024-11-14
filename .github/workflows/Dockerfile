@@ -16,8 +16,8 @@ COPY jrebel.jar /opt/jrebel/jrebel.jar
 #eap8
 COPY jboss-eap-8.0.0.zip ./
 RUN unzip -d /opt  /opt/jboss-eap-8.0.0.zip && \
-    mv /opt/jboss-eap-8.0  /opt/eap8
-COPY standalone.conf /opt/eap8/bin    
+    mv /opt/jboss-eap-8.0  /opt/wildfly
+COPY standalone.conf /opt/wildfly/bin    
     
 #timezone setting
 RUN apk add --no-cache tzdata
