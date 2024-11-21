@@ -24,6 +24,7 @@ RUN apk add --no-cache tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
 RUN apk add mksh
 RUN ln -sf  /bin/mksh /bin/sh
+RUN ln -sf  /bin/mksh /bin/ksh
 CMD ["tail","-f","/dev/null"]    
 
 
